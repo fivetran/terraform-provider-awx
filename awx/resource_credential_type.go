@@ -1,12 +1,11 @@
 /*
 *TBD*
 
-Example Usage
+# Example Usage
 
 ```hcl
 *TBD*
 ```
-
 */
 package awx
 
@@ -126,11 +125,29 @@ func resourceCredentialTypeRead(ctx context.Context, d *schema.ResourceData, m i
 		return diags
 	}
 
+	inputsBytes, err := json.Marshal(credtype.Inputs)
+	if err != nil {
+		diags = append(diags, diag.Diagnostic{
+			Severity: diag.Warning,
+			Summary:  "Unable to deserialize credential type inputs",
+			Detail:   fmt.Sprintf("Deserialization error: %s", err.Error()),
+		})
+	}
+
+	injectorsBytes, err := json.Marshal(credtype.Injectors)
+	if err != nil {
+		diags = append(diags, diag.Diagnostic{
+			Severity: diag.Warning,
+			Summary:  "Unable to deserialize credential type injectors",
+			Detail:   fmt.Sprintf("Deserialization error: %s", err.Error()),
+		})
+	}
+
 	d.Set("name", credtype.Name)
 	d.Set("description", credtype.Description)
 	d.Set("kind", credtype.Kind)
-	d.Set("inputs", credtype.Inputs)
-	d.Set("injectors", credtype.Injectors)
+	d.Set("inputs", string(inputsBytes))
+	d.Set("injectors", string(injectorsBytes))
 
 	return diags
 }
