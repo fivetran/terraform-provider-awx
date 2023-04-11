@@ -1,3 +1,33 @@
+# [0.19.0](https://github.com/denouche/terraform-provider-awx/compare/v0.18.0...v0.19.0) (2022-11-14)
+
+
+### Features
+
+* Add organization role data source ([4bc4065](https://github.com/denouche/terraform-provider-awx/commit/4bc40653f96d92c47d0e0f5fb53d4172661491f4))
+* Add setting resource ([b1b1a24](https://github.com/denouche/terraform-provider-awx/commit/b1b1a2403887599bd451e54094a48c7e728aa8da))
+* fetch upstream ([8cc9cb0](https://github.com/denouche/terraform-provider-awx/commit/8cc9cb0f160b779e02f17fab10c03d4cb7ec54b9)), closes [#16](https://github.com/denouche/terraform-provider-awx/issues/16)
+
+# [0.18.0](https://github.com/denouche/terraform-provider-awx/compare/v0.17.0...v0.18.0) (2022-11-14)
+
+
+### Features
+
+* add AWX token authentication ([#15](https://github.com/denouche/terraform-provider-awx/issues/15)) ([55b7d41](https://github.com/denouche/terraform-provider-awx/commit/55b7d41579f79d7fbb1aa61bd243405a81815748))
+
+# [0.17.0](https://github.com/denouche/terraform-provider-awx/compare/v0.16.0...v0.17.0) (2022-10-31)
+
+
+### Features
+
+* adds the possibility to use source_id inside resource_inventory_source ([#20](https://github.com/denouche/terraform-provider-awx/issues/20)) ([6891c9e](https://github.com/denouche/terraform-provider-awx/commit/6891c9eb98b8ca916746af08c640520f07d29dda))
+
+# [0.16.0](https://github.com/denouche/terraform-provider-awx/compare/v0.15.6...v0.16.0) (2022-10-25)
+
+
+### Features
+
+* upgrade goawx lib to 0.14.1 ([#22](https://github.com/denouche/terraform-provider-awx/issues/22)) ([3193f56](https://github.com/denouche/terraform-provider-awx/commit/3193f56a55ac96103f0b2a4f355f0cd723116f86))
+
 ## [0.15.6](https://github.com/denouche/terraform-provider-awx/compare/v0.15.5...v0.15.6) (2022-07-22)
 
 
